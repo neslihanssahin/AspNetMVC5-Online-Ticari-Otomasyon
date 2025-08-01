@@ -1,0 +1,34 @@
+﻿@model  MvcOnlineTİcariOtomasyon.Models.Siniflar.KargoDetay
+@{
+    ViewBag.Title = "YeniKargo";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <h1 class="mt-4">Yeni Kargo</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="#">Kargo Yönetimi</a></li>
+        <li class="breadcrumb-item active">Kargolar</li>
+    </ol>
+</div>
+
+<form class="form-group" method="post">
+    @Html.Label("Takip Kodu")
+    @Html.TextBoxFor(x => x.TakipKodu, new { @class = "form-control" })
+    <br />
+    @Html.Label("Personel")
+    @Html.TextBoxFor(x => x.Personel, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alıcı")
+    @Html.TextBoxFor(x => x.Alici, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    <input class="form-control" type="date" name="Tarih" />
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-success">KAYDET</button>

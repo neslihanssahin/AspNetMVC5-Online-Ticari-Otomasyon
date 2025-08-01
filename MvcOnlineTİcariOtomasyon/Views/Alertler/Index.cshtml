@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<br />
+<br />
+<button class="btn btn-primary" id="btn1">Buton1</button>
+<button class="btn btn-info" id="btn2">Buton2</button>
+<button class="btn btn-warning" id="btn3">Buton3</button>
+<button class="btn btn-dark" id="btn4">Buton4</button>
+<button class="btn btn-danger" id="btn5">Buton5</button>
+<button class="btn btn-outline-secondary" id="btn6">Buton6</button>
+
+<script>
+    $('#btn1').click(function () {
+        swal("Hello Word");
+    });
+</script>
+<script>
+    $('#btn2').click(function () {
+        swal("Burası başlık","Burası içerik");
+    });
+</script>
+<script>
+    $('#btn3').click(function () {
+        swal("Burası başlık", "Burası içerik","success");
+    });
+</script>
+<script>
+    $('#btn4').click(function () {
+        swal("Burası başlık", "Burası içerik", "warning");
+    });
+</script>
+<script>
+    $('#btn5').click(function () {
+        swal("Burası başlık", "Burası içerik", "error");
+    });
+</script>
+<script>
+    $('#btn6').click(function () {
+        swal("Birinci mesaj")
+            .then((value) => {
+                swal("ikinci mesaj");
+            });
+    });
+</script>
+
+
+
